@@ -4,7 +4,7 @@
 	It repeats until no input elements remain.
 --}
 
---insertionSort :: (Ord a) => [a] -> [a]
+insertionSort :: (Ord a) => [a] -> [a]
 insertionSort ilist = insertionSort' 0 ilist
 insertionSort' _ [] = []
 insertionSort' selElemIdx ilist =
