@@ -1,2 +1,2 @@
 # Playground
-for different languages, technologies, algos and concurrency.
+Different languages, technologies, algos and concurrency.
