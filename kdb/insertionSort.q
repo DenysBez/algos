@@ -10,3 +10,12 @@ insertionSort:{[ilist]
          ;i+:1];
     :ilist;
 }
+
+shiftElemPos:{[ilist; curPos; newPos]
+    firstPart:((newPos#ilist),(ilist[curPos]);
+    secondPart:();
+
+    $[(curPos-newPos) > 1;ilist[];
+    //:,(ilist[newPos]),
+    lastPart:((curPos+1)-count[test])#ilist;
+}
