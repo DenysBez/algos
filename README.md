@@ -1,2 +1,2 @@
 # Playground
-Different languages, technologies, algos and concurrency.
+Low latency, algos, concurrency, languages.
