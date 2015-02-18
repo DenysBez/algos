@@ -1,2 +1,2 @@
 # Playground
-Experiments with Different Languages, Low latency, Algos and Concurrency.
+Different Languages, Low latency, Algos and Concurrency.
