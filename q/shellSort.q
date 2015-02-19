@@ -11,7 +11,6 @@ swap:{[ilist;aIdx;bIdx]
     :ilist;
 }
 
-//in progress
 shellSort:{[ilist]
     incr: floor (count[ilist] % 2);
     
