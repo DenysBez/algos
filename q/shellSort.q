@@ -1,14 +1,11 @@
-leftShift:{[ilist; curPos; newPos]
-    $[count[ilist] > 1;
-        [curElem:ilist[curPos];
-            res:(ilist _ curPos);
-        
-            ilist:(newPos#ilist),(curElem),((newPos - count[res])#res)
-        ];
-
-        :ilist
-     ]
-};
+swap:{[ilist;aIdx;bIdx]
+    if[count[ilist] >= 2;
+        [tmp:ilist[aIdx];
+         ilist[aIdx]:ilist[bIdx];
+         ilist[bIdx]:tmp;
+        ]];
+    :ilist;
+}
 
 //in progress
 shellSort:{[ilist]
@@ -19,12 +16,11 @@ shellSort:{[ilist]
             while[i < count[ilist];
                      j:i;
                      while[(j > 0) and (ilist[j] < ilist[j-i]);
-                           ilist:leftShift[ilist;i;(i-j)];
+                           ilist:swap[ilist;i;(i-j)];
                      j-:i];
-            ;i+:incr];
+                  i+:incr];
             $[incr=2;incr:1;incr:floor (incr * (5.0 % 11))];
          ];
 
     :ilist;
 };
-
