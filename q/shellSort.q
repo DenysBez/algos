@@ -1,4 +1,4 @@
-//Shellsort is similar to the insertion sort and it exchanges elements of the list that are far apart in the first iterations.
+//Shellsort is similar to the insertion sort and it exchanges elements that are far apart during the first iterations.
 //It uses on of the gap algorithms to calculate distance between elements and 
 //eventually it sorts list with the gap equals to one which is the same as insertion sort.
 
