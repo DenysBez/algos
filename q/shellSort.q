@@ -17,12 +17,11 @@ shellSort:{[ilist]
     while[incr > 0;
             i:incr;
             while[i < count[ilist];
-                     j:i-1;
-                     while[(j >= 0) and (ilist[i] < ilist[j]); j-:1];
-                     if[j < (i-1);
-                         ilist:leftShift[ilist;i;(j+1)];
-                       ];
-            ;i+:1];
+                     j:i;
+                     while[(j > 0) and (ilist[j] < ilist[j-i]);
+                           ilist:leftShift[ilist;i;(i-j)];                           
+                     j-:i];
+            ;i+:incr];
             $[incr=2;incr:1;incr:floor (incr * (5.0 % 11))];
          ];
 
