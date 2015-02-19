@@ -19,7 +19,7 @@ shellSort:{[ilist]
             while[i < count[ilist];
                      j:i;
                      while[(j > 0) and (ilist[j] < ilist[j-i]);
-                           ilist:leftShift[ilist;i;(i-j)];                           
+                           ilist:leftShift[ilist;i;(i-j)];
                      j-:i];
             ;i+:incr];
             $[incr=2;incr:1;incr:floor (incr * (5.0 % 11))];
@@ -27,3 +27,4 @@ shellSort:{[ilist]
 
     :ilist;
 };
+
