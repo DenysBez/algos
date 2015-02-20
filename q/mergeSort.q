@@ -1,3 +1,5 @@
+//Firstly we divide the list into sublists each containing onle one element after that we merge sublists.
+
 merge:{[iList;jList]
     result:();
     i:0;
@@ -9,11 +11,9 @@ merge:{[iList;jList]
     :result;
 };
 
-//in progress
 mergeSort:{[iList]
     if[count[iList] > 1;[
-                            splitAt:floor count[iList]%2;
-                            iList:merge[ mergeSort[splitAt#iList]; mergeSort[(neg splitAt)#iList] ];
+                            iList:merge[ mergeSort[(floor count[iList]%2)#iList]; mergeSort[(neg (ceiling count[iList]%2))#iList] ];
                         ];
       ];
     :iList;
