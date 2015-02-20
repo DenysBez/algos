@@ -13,7 +13,9 @@ merge:{[iList;jList]
 
 mergeSort:{[iList]
     if[count[iList] > 1;[
-                            iList:merge[ mergeSort[(floor count[iList]%2)#iList]; mergeSort[(neg (ceiling count[iList]%2))#iList] ];
+                            iList:merge[ mergeSort[(floor count[iList]%2)#iList]; 
+                                         mergeSort[(neg (ceiling count[iList]%2))#iList] 
+                                       ];
                         ];
       ];
     :iList;
