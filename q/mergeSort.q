@@ -12,8 +12,8 @@ merge:{[iList;jList]
 //in progress
 mergeSort:{[iList]
     if[count[iList] > 1;[
-                        q:count[iList]%2;
-                        iList:merge[ mergeSort[[0;q] sublist iList]; mergeSort[[q;count[iList] sublist iList]]];
+                            splitAt:floor count[iList]%2;
+                            iList:merge[ mergeSort[splitAt#iList]; mergeSort[(neg splitAt)#iList] ];
                         ];
       ];
     :iList;
