@@ -16,16 +16,18 @@ partition:{[ilist]
           while[ilist[i] < ilist[pivotIdx];i+:1];
           while[ilist[j] > ilist[pivotIdx];j-:1];
           if[i <= j; 
-             swap[ilist;i;j];
+             ilist:swap[ilist;i;j];
              i+:1;
              j-:1];
          ];
-    :i;
+    :(i;(ilist));
 };
 
 quickSort:{[ilist]
     result:();
-    partitionIdx:partition[ilist];
+    partitionRes:partition[ilist];
+    partitionIdx:partitionRes[0];
+    ilist:partitionRes[1];
 
     result,:quickSort[(partitionIdx - 1)#ilist];
 
