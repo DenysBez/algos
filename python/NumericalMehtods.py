@@ -1,8 +1,6 @@
 from math import *
 from time import *
 
-
-
 def funcFindDerivative(x, y):
 	return  (1+3*x**2)/(3*y+6);
 
@@ -59,9 +57,8 @@ def rungeKuttaFourth(func, stepSize, numOfSteps, x0, y0):
         
         globalError = abs(funcSolution(prevX) - prevY);
     return;
+   
     
-    
-
 print ('Euler Standard (Forward)  with step size: 0.1');
 start = time();
 eulerStandard(funcFindDerivative, 0.1, 20, 0, 1);
