@@ -1,5 +1,5 @@
 function findSqrtEigth(errorTolerance)
-  secantSqrtEight(errorTolerance);
+  newtoneSqrtEight(errorTolerance);
 endfunction
 
 # Find sqrt of 8 with given error tolerance using bisection method
@@ -70,6 +70,19 @@ endfunction
 
 
 function newtoneSqrtEight(errorTolerance)
+  x0 = 3;
+  v = x0**2 - 8;
   
-
+  if(abs(v) < errorTolerance)
+    return;
+  endif
+    
+  for iter = 1:20
+    x1 = x0 - v / (2*x0);
+    v = x1**2 - 8;
+    printf('%i | %f | %f\n', iter, x1, v);
+    
+    x0 = x1;
+    
+  endfor
 endfunction
