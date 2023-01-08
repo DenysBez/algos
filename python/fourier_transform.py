@@ -16,11 +16,9 @@ def fourier_transform(data):
             
             time = t / N
             distance = rate * time
-
             
             re_part = data[t] * math.cos(distance);
             im_part = data[t] * math.sin(distance);
-
             
             re += re_part;
             im += im_part;
@@ -41,9 +39,7 @@ def fourier_transform(data):
             "amp": math.sqrt(re*re + im*im),
             "phase": math.atan2(im, re) * 180 / math.pi     #convert to degrees
         };
-        freq += 1;
+        freq += 1; 
     
-    
-
     return frequencies;
     
