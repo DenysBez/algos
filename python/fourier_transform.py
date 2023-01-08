@@ -1,7 +1,6 @@
 import math
 
-def fourier_transform(data): 
-    
+def fourier_transform(data):     
     N = len(data)
     frequencies = {}
 
@@ -41,5 +40,4 @@ def fourier_transform(data):
         };
         freq += 1; 
     
-    return frequencies;
-    
+    return frequencies;    
